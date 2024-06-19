@@ -1,5 +1,5 @@
-var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+var themeToggleDarkIcon = document.querySelectorAll('.theme-toggle-dark-icon');
+var themeToggleLightIcon = document.querySelectorAll('.theme-toggle-light-icon');
 var logo = document.getElementById('logo')
 var lightphone = document.getElementById('lightphone')
 var darkphone = document.getElementById('darkphone')
@@ -9,8 +9,12 @@ var navsettings = document.querySelector('#nav-setings>*')
 var menubar=document.getElementById('mobile-menu')
 
 function lighton() {
-  themeToggleDarkIcon.classList.remove('hidden')
-  themeToggleLightIcon.classList.add('hidden')
+  themeToggleDarkIcon.forEach(element => {
+    element.classList.remove('hidden')
+  });
+  themeToggleLightIcon.forEach(element => {
+    element.classList.add('hidden')
+  });
   document.documentElement.classList.remove('dark');
   localStorage.setItem('darkmode', 'false');
   darkphone.classList.add('hidden')
@@ -18,8 +22,12 @@ function lighton() {
   logo.classList.add('invert')
 }
 function lightoff() {
-  themeToggleDarkIcon.classList.add('hidden')
-  themeToggleLightIcon.classList.remove('hidden')
+  themeToggleDarkIcon.forEach(element => {
+    element.classList.add('hidden')
+  });
+  themeToggleLightIcon.forEach(element => {
+    element.classList.remove('hidden')
+  });
   document.documentElement.classList.add('dark');
   localStorage.setItem('darkmode', 'true');
   darkphone.classList.remove('hidden')
@@ -33,13 +41,17 @@ if (localStorage.getItem('darkmode') === 'true' || (!('darkmode' in localStorage
   lighton()
 }
 
-themeToggleLightIcon.addEventListener('click', () => {
-  lighton()
-
-})
-themeToggleDarkIcon.addEventListener('click', () => {
-  lightoff()
-})
+themeToggleLightIcon.forEach(element => {
+  element.addEventListener('click', () => {
+    lighton()
+  
+  })
+});
+themeToggleDarkIcon.forEach(element => {
+  element.addEventListener('click', () => {
+    lightoff()
+  })
+});
 
 navsettings.addEventListener('mouseover', () => {
   scan_settings.classList.remove('hidden')
