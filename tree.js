@@ -55,6 +55,7 @@ controls.autoRotate = true;
 controls.maxDistance = 1;
 controls.minDistance = 5;
 controls.enablePan = false;
+controls.enableRotate = false;
 controls.autoRotateSpeed = 4;
 console.log(controls)
 
