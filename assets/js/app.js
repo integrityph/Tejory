@@ -63,6 +63,12 @@ fetch('https://api.coincap.io/v2/assets')
     var limit=5;
     var counter=0;
     for (i in coins) {
+      if (coins[i].symbol == "USDT") {
+        continue;
+      }
+      if (coins[i].symbol == "USDC") {
+        continue;
+      }
       // console.log(coins[i])
       if(counter >= limit){
 
