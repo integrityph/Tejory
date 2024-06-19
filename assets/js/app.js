@@ -6,6 +6,7 @@ var darkphone = document.getElementById('darkphone')
 var scanqr = document.getElementById('scan-qr')
 var scan_settings = document.getElementById('scan_settings')
 var navsettings = document.querySelector('#nav-setings>*')
+var menubar=document.getElementById('mobile-menu')
 
 function lighton() {
   themeToggleDarkIcon.classList.remove('hidden')
@@ -93,6 +94,17 @@ fetch('https://api.coincap.io/v2/assets')
     }
 
   })
+  var click=true;
+function menu(){
+  if(click===true){
+    menubar.classList.remove('hidden')
+   click=false
+  }
+  else{
+    menubar.classList.add('hidden')
+    click=true
+  }
 
+}
 
 
