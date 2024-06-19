@@ -14,17 +14,25 @@
 </head>
 
 <body>
-    <main class="w-full bg-white h-dvh dark:bg-neutral-900 transition-colors duration-500">
-        <div
-            class="loader w-full h-dvh transition-colors duration-500 flex justify-center items-center flex-col gap-3"
-            style="background-color: rgba(248, 248, 248, 0.322); backdrop-filter: blur(2px);">
-            <img class="w-24 animate-spin" src="assets/images/TEJORY_logo.png" alt="" sizes="" srcset="">
-            <p class="text-black dark:text-white font-bold animate-pulse text-xl">Loading</p>
-        </div>
+    <div
+    class="loader fixed w-full h-dvh transition-colors duration-500 flex justify-center items-center flex-col gap-3"
+    style="background-color: rgba(248, 248, 248, 0.322); backdrop-filter: blur(2px);">
+    <img class="w-24 animate-spin" src="assets/images/TEJORY_logo.png" alt="" sizes="" srcset="">
+    <p class="text-black dark:text-white font-bold animate-pulse text-xl">Loading</p>
+</div>
+    <main class="w-full bg-white min-h-dvh h-auto dark:bg-neutral-900 transition-colors duration-500 p-5">
+        
 
-Screenshot
-
-
+<p class="dark:text-white font-bold text-4xl flex items-center gap-5"> <a href="index.html"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></a>  Screenshot</p>
+<div class="w-full flex flex-col md:flex-row justify-center items-center gap-5 p-5 md:p-0">  
+    <div class="bg-white p-4 rounded-3xl dark:bg-neutral-950 flex flex-col gap-2">
+    <img src="assets/images/darkmode" alt="" srcset="" class="w-72 rounded-2xl duration-1000" id="darkphone">
+   <p  class="text-xl font-bold text-white dark:text-white">Dark Theme</p>
+  </div>
+  <div class="bg-white p-4 rounded-3xl dark:bg-neutral-950 flex flex-col gap-2">
+    <img src="assets/images/lightmode" alt="" srcset="" class="w-72 rounded-2xl  duration-1000" id="lightphone">
+   <p  class="text-xl font-bold text-white dark:text-white">Light Theme</p>
+  </div>
     </main>
     <script src="assets/js/base.js"></script>
     <script src="assets/js/screenshot.js"></script>

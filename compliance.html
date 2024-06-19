@@ -14,17 +14,78 @@
 </head>
 
 <body>
-    <main class="w-full bg-white h-dvh dark:bg-neutral-900 transition-colors duration-500">
-        <div
-            class="loader w-full h-dvh transition-colors duration-500 flex justify-center items-center flex-col gap-3"
-            style="background-color: rgba(248, 248, 248, 0.322); backdrop-filter: blur(2px);">
-            <img class="w-24 animate-spin" src="assets/images/TEJORY_logo.png" alt="" sizes="" srcset="">
-            <p class="text-black dark:text-white font-bold animate-pulse text-xl">Loading</p>
+    <div class="loader fixed w-full h-dvh transition-colors duration-500 flex justify-center items-center flex-col gap-3"
+        style="background-color: rgba(248, 248, 248, 0.322); backdrop-filter: blur(2px);">
+        <img class="w-24 animate-spin" src="assets/images/TEJORY_logo.png" alt="" sizes="" srcset="">
+        <p class="text-black dark:text-white font-bold animate-pulse text-xl">Loading</p>
+    </div>
+    <main class="w-full bg-white min-h-dvh h-auto dark:bg-neutral-900 transition-colors duration-500 p-5">
+        <p class="dark:text-white font-bold text-4xl flex items-center gap-5"> <a href="index.html"> <svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-arrow-left">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg></a> Compliance</p>
+
+        <div class="w-full mt-5 flex flex-wrap gap-5 justify-start items-center">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Security Measures
+            </h5>
+            <p class="font-normal text-gray-700 dark:text-gray-400">
+                Implement robust encryption standards (e.g., AES-256) to protect user data and private keys. Utilize multi-factor authentication (MFA) for user access and transaction authorization. Regularly conduct security audits and vulnerability assessments to maintain a secure environment.
+            </p>
+            
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                KYC (Know Your Customer) and AML (Anti-Money Laundering)
+            </h5>
+            <p class="font-normal text-gray-700 dark:text-gray-400">
+                Require users to complete KYC verification to comply with regulatory requirements. Monitor transactions for suspicious activity and implement AML procedures. Report suspicious transactions or activities to relevant authorities as per regulatory guidelines.
+            </p>
+            
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Privacy Policies
+            </h5>
+            <p class="font-normal text-gray-700 dark:text-gray-400">
+                Clearly outline data protection policies and user privacy rights. Obtain explicit consent from users regarding the collection and use of their personal information. Ensure compliance with data protection regulations such as GDPR (General Data Protection Regulation) if applicable.
+            </p>
+            
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Transaction Monitoring and Reporting
+            </h5>
+            <p class="font-normal text-gray-700 dark:text-gray-400">
+                Monitor transactions in real-time for unusual patterns or large transactions. Maintain transaction records and reporting capabilities to comply with regulatory reporting requirements. Implement mechanisms to detect and prevent fraudulent activities.
+            </p>
+            
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Legal and Regulatory Compliance
+            </h5>
+            <p class="font-normal text-gray-700 dark:text-gray-400">
+                Stay informed about regulatory developments and ensure compliance with applicable laws and regulations (e.g., securities laws, tax regulations). Establish partnerships with legal advisors to ensure adherence to local and international regulatory frameworks. Obtain necessary licenses or registrations as required by regulatory authorities.
+            </p>
+            
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                User Education and Support
+            </h5>
+            <p class="font-normal text-gray-700 dark:text-gray-400">
+                Provide educational resources to users about security best practices, regulatory compliance, and the risks associated with cryptocurrencies. Offer responsive customer support to address user inquiries and concerns related to compliance and security.
+            </p>
+            
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Internal Controls and Governance
+            </h5>
+            <p class="font-normal text-gray-700 dark:text-gray-400">
+                Implement internal controls to manage risks effectively, including segregation of duties and regular audits. Establish a compliance committee or officer responsible for overseeing and enforcing compliance policies. Conduct regular training for employees to ensure awareness of compliance requirements and best practices.
+            </p>
+            
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Ethical Standards and Transparency
+            </h5>
+            <p class="font-normal text-gray-700 dark:text-gray-400">
+                Maintain transparency in operations, fees, and terms of service. Adhere to ethical standards and principles of integrity in all business practices. Communicate openly with users and stakeholders about any changes to policies or services.
+            </p>
+            
         </div>
-
-Compliance
-
-
     </main>
     <script src="assets/js/base.js"></script>
     <script src="assets/js/compliance.js"></script>
