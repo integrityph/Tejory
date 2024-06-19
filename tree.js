@@ -18,7 +18,7 @@ let mouseX = window.innerWidth / 2;
 let mouseY = window.innerHeight / 2;
 let obj;
 
-const loader = new ColladaLoader().setPath('/tejor/');
+const loader = new ColladaLoader().setPath('tejor/');
 
 loader.load(
   'Tejory.dae',
