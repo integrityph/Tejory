@@ -7,8 +7,8 @@ import { FBXLoader } from 'three/addons/loaders/FBXLoader.js';
 
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(2,1.5,1);
-camera.position.set(1, 1, 1);
+const camera = new THREE.PerspectiveCamera(3,1.5,1);
+camera.position.set(2, 1, 1);
 
 var ip = document.querySelector('.ip')
 var test = getComputedStyle(ip)

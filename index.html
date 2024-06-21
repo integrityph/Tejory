@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="description" content="landing page">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -15,12 +16,13 @@
     <script type="module" src="tree.js"></script>
     <link rel="shortcut icon" href="assets/images/TEJORY_logo.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.cdnfonts.com/css/nexa-bold" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/tailwind.config.js"></script>
+    <script src="assets/js/particle/particle.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
-<body>
+<body class="dark:bg-neutral-900">
     <main class="w-full bg-white h-dvh dark:bg-neutral-900 ">
 
         <nav class="bg-white fixed w-full z-50 dark:bg-neutral-900 ">
@@ -99,20 +101,23 @@
              
             </div>
           </nav>
-          <section class="w-full flex flex-wrap pt-20 " style="height: auto;"  >
-        <div class="w-full p-5 text-center md:p-0 lg:w-1/2 flex flex-col justify-center items-center gap-3">
+          <section class="w-full flex flex-wrap pt-20 relative" style="height: auto;">
+            <div id="particles-js" class="w-full min-h-dvh h-full absolute">
+              
+            </div>
+        <div class="w-full p-5 text-center md:p-0 lg:w-1/2 flex flex-col justify-center items-center gap-3" data-aos="zoom-in">
           <h1 class="text-2xl md:text-5xl font-mono uppercase  font-bold dark:text-white ">Welcome to Tejory</H1>
-            <p class="text-md md:text-xl lg:w-3/5  dark:text-white  text-center mb-2">"Tejory: <span class="text-gray-500 underline">The Ultimate Crypto Vault</span> " is your all-in-one solution for managing and maximizing your cryptocurrency assets. With Tejory, seamlessly navigate the complex world of digital currencies with confidence and ease.</p>
-            <button type="button" class="animate-pulse  relative text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-md px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2">
+            <p class="text-md md:text-xl lg:w-3/5  dark:text-white  text-center mb-2">"Tejory: <span class="text-gray-600 underline dark:text-gray-200 animate-pulse">The Ultimate Crypto Vault</span> " is your all-in-one solution for managing and maximizing your cryptocurrency assets. With Tejory, seamlessly navigate the complex world of digital currencies with confidence and ease.</p>
+            <a href="#getStarted" class="relative text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-md px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2">
               Explore Tejory
-              </button>
+            </a>
    
         </div>
-        <div class="ip w-full lg:w-1/2 relative dark:bg-neutral-900 "  style="height: 600px;">
+        <div class="ip w-full lg:w-1/2 relative"  style="height: 600px;" data-aos="fade-left">
 
-          <div class="absolute bg-transparent w-full h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-x-auto rounded-2xl">
-            <table class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-sm rounded-2xl text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
-                <thead class="text-xs text-white uppercase bg-black dark:bg-gray-700 dark:text-white" style="background-color: rgba(78, 78, 78, 0.651); backdrop-filter: blur(1px);">
+          <div class="absolute bg-transparent w-full h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-x-auto rounded-2xl" >
+            <table  class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-sm rounded-2xl text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
+                <thead class="text-xs text-white uppercase bg-black dark:bg-gray-700 dark:text-white" style="background-color: rgba(37, 37, 37, 0.212); backdrop-filter: blur(3px);">
                     <tr>
                       <th scope="col" class="px-6 py-3">
                         Rank
@@ -126,12 +131,12 @@
                     </tr>
                 </thead>
                 <tbody id="coin-body">
-                  <tr class="text-white border-b dark:text-white dark:bg-gray-800 dark:border-gray-700 hidden" id="mytemp" style="background-color: rgba(78, 78, 78, 0.651); backdrop-filter: blur(1px);">
-                    <td class="px-6 py-4" data-coin="rank">
+                  <tr class="text-white border-b dark:text-white dark:bg-gray-800 dark:border-gray-700 hidden" id="mytemp" style="background-color: rgba(0, 0, 0, 0.185); backdrop-filter: blur(1px);">
+                    <td class="px-6 py-4 font-bold" data-coin="rank">
                     </td>
-                    <th scope="row" class="px-6 py-4 font-medium uppercase text-white whitespace-nowrap dark:text-white" data-coin="name">
+                    <th scope="row" class="px-6 py-4 font-bold uppercase text-white whitespace-nowrap dark:text-white" data-coin="name">
                     </th>
-                    <td class="px-0 md:px-6 py-4" data-coin="price">
+                    <td class="px-0 md:px-6 py-4 font-bold" data-coin="price">
                     </td>
                 </tr>
           
@@ -143,15 +148,15 @@
         
           </section>
 
-          <section class=" pt-20  w-full px-0 md:px-10  dark:bg-neutral-900 ">
-<div class="bg-gray-700 h-full lg:h-dvh rounded-lg transition-colors duration-1000 flex justify-between items-center flex-wrap flex-col-reverse md:flex-row">
+          <section class=" pt-20  w-full px-0 md:px-10  dark:bg-transparent relative" >
+<div class="bg-gray-700 h-full lg:h-dvh rounded-lg transition-colors duration-1000 flex justify-between items-center flex-wrap flex-col-reverse md:flex-row" id="getStarted">
   <div class="w-full lg:w-1/2 flex justify-center items-center p-5 md:p-0">  
     <div class="bg-white p-4 rounded-3xl dark:bg-neutral-950 ">
-    <img src="assets/images/darkmode" alt="" srcset="" class="w-72 rounded-2xl duration-1000" id="darkphone">
-    <img src="assets/images/lightmode" alt="" srcset="" class="w-72 rounded-2xl hidden " id="lightphone">
+    <img src="assets/images/darkmode" alt="" srcset="" class="w-72 rounded-2xl duration-1000" id="darkphone" data-aos="zoom-in-down">
+    <img src="assets/images/lightmode" alt="" srcset="" class="w-72 rounded-2xl hidden " id="lightphone" data-aos="zoom-in-down">
   </div>
   </div>
-  <div class="w-full lg:w-1/2 p-5 lg:p-32 flex flex-col gap-5 ">
+  <div class="w-full lg:w-1/2 p-5 lg:p-32 flex flex-col gap-5 " data-aos="fade-up">
     <p class="text-2xl md:text-4xl text-white font-mono uppercase font-bold dark:text-white ">Get started</p>
     <p class="text-md md:text-xl text-white  ">Whether you're a casual investor or a seasoned trader, Tejory empowers you to navigate the evolving crypto landscape with confidence, convenience, and security. Welcome to a new era of cryptocurrency management with Tejory: The Ultimate Crypto Wallet.</p>
     <div class="flex items-center gap-5 w-full">
@@ -170,6 +175,9 @@
 </div>
 
           </section>
+          <section class="h-full lg:h-dvh w-full px-0 md:px-10  dark:bg-transparent relative">
+
+          </section>
           
 
 <footer class="px-10 dark:bg-neutral-900 ">
@@ -177,8 +185,8 @@
 <div class="flex justify-center items-center flex-col">
   <p class="text-lg font-bold dark:text-white ">Community</p>
   <div class="flex ">
-    <a href="https://github.com/integrityph/Tejory"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8  hover:text-slate-600 dark:text-white " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
-    <a href="https://discord.com/"><svg class="h-10 w-10  hover:text-slate-600 dark:text-white " viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" d="m68 138-8 16c-10.19-4.246-20.742-8.492-31.96-15.8-3.912-2.549-6.284-6.88-6.378-11.548-.488-23.964 5.134-48.056 19.369-73.528 1.863-3.334 4.967-5.778 8.567-7.056C58.186 43.02 64.016 40.664 74 39l6 11s6-2 16-2 16 2 16 2l6-11c9.984 1.664 15.814 4.02 24.402 7.068 3.6 1.278 6.704 3.722 8.567 7.056 14.235 25.472 19.857 49.564 19.37 73.528-.095 4.668-2.467 8.999-6.379 11.548-11.218 7.308-21.769 11.554-31.96 15.8l-8-16m-68-8s20 10 40 10 40-10 40-10"></path><ellipse cx="71" cy="101" fill="currentColor" rx="13" ry="15"></ellipse><ellipse cx="121" cy="101" fill="currentColor" rx="13" ry="15"></ellipse></g></svg></a>
+    <a href="https://github.com/integrityph/Tejory" aria-label="Redirect Github"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8  hover:text-slate-600 dark:text-white " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+    <a href="https://discord.com/" aria-label="Redirect to Discord"><svg class="h-10 w-10  hover:text-slate-600 dark:text-white " viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" d="m68 138-8 16c-10.19-4.246-20.742-8.492-31.96-15.8-3.912-2.549-6.284-6.88-6.378-11.548-.488-23.964 5.134-48.056 19.369-73.528 1.863-3.334 4.967-5.778 8.567-7.056C58.186 43.02 64.016 40.664 74 39l6 11s6-2 16-2 16 2 16 2l6-11c9.984 1.664 15.814 4.02 24.402 7.068 3.6 1.278 6.704 3.722 8.567 7.056 14.235 25.472 19.857 49.564 19.37 73.528-.095 4.668-2.467 8.999-6.379 11.548-11.218 7.308-21.769 11.554-31.96 15.8l-8-16m-68-8s20 10 40 10 40-10 40-10"></path><ellipse cx="71" cy="101" fill="currentColor" rx="13" ry="15"></ellipse><ellipse cx="121" cy="101" fill="currentColor" rx="13" ry="15"></ellipse></g></svg></a>
   </div>
 </div>
 <div class="flex justify-center items-center">
@@ -201,5 +209,9 @@
 
     </main>
 <script src="assets/js/app.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
