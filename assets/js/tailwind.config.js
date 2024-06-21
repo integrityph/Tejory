@@ -4,6 +4,10 @@
       extend: {
         colors: {
           clifford: '#da373d',
+        },
+        backgroundImage: {
+          'integrity': "url('./assets/images/integrity.jpg')",
+         
         }
       }
     }

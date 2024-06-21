@@ -11,24 +11,44 @@
     <link href="https://fonts.cdnfonts.com/css/nexa-bold" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/tailwind.config.js"></script>
+    <link href="assets/css/aos/aos.css" rel="stylesheet">
 </head>
 
 <body>
     <div
-    class="loader fixed w-full h-dvh transition-colors duration-500 flex justify-center items-center flex-col gap-3"
-    style="background-color: rgba(248, 248, 248, 0.322); backdrop-filter: blur(2px);">
+    class="loader fixed w-full h-dvh transition-colors duration-500 flex justify-center items-center flex-col gap-3 bg-white dark:bg-neutral-900 z-50">
     <img class="w-24 animate-spin" src="assets/images/TEJORY_logo.png" alt="" sizes="" srcset="">
     <p class="text-black dark:text-white font-bold animate-pulse text-xl">Loading</p>
 </div>
-    <main class="w-full bg-white min-h-dvh h-auto dark:bg-neutral-900 transition-colors duration-500 p-5">
+    <main class="w-full bg-white min-h-dvh h-auto dark:bg-neutral-900 transition-colors duration-500">
         
-        <p class="dark:text-white font-bold text-4xl flex items-center gap-5"> <a href="index.html"> <svg
-            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="feather feather-arrow-left">
-            <line x1="19" y1="12" x2="5" y2="12"></line>
-            <polyline points="12 19 5 12 12 5"></polyline>
-        </svg></a> About</p>
+       
+
+<section class="bg-center min-h-dvh bg-no-repeat bg-integrity bg-cover bg-blend-multiply flex justify-center items-center bg-neutral-800">
+    <p class="text-white dark:text-white font-bold text-4xl flex items-center gap-5 absolute top-5 left-5"> <a href="index.html"> <svg
+        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="hover:text-red-700"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-arrow-left">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+    </svg></a> About</p>
+    <div class="px-1 mx-auto max-w-screen-xl flex flex-col justify-center item-center gap-2 py-24 lg:py-56" data-aos="fade-up">
+        <h1 class="mb-4 text-lg font-normal text-white lg:text-xl text-center">We are</h1>
+        <p class="mb-6 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-7xl uppercase tracking-wide w-full">Integrity<span class="text-red-700 animate-pulse">Net</span></p>
+        <div class="flex  justify-center item-center flex-wrap h-auto"> 
+             <div id="text-container" class="max-w-64 lg:max-w-lg text-white text-center w-full "></div>
+        </div>
+        <div class="flex flex-col justify-center animate-pulse  sm:flex-row  sm:space-y-0 mt-5">
+            <a href="#" class="inline-flex justify-center hover:bg-red-900 items-center py-4 px-5 text-base font-medium text-center text-white border border-red-500 hover:border-white focus:border-red-600 focus:ring-4 focus:ring-red-400">
+                Get to know us
+                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
     <div class="w-full p-5">
         <img src="" alt="">
         <p class="text-red-600 font-bold text-2xl dark:text-red-600">Who are we</p>
@@ -41,6 +61,55 @@
     </main>
     <script src="assets/js/base.js"></script>
     <script src="assets/js/about.js"></script>
+    <script>
+        // Array of sentences to display
+        const sentences = [
+          "Passion for Excellence and Dedication to Rendering Quality Service.",
+          "IntegrityNet is a wide-ranged solutions company based in Batangas, Philippines.",
+          "Building great business solutions for industry-leading brands."
+        ];
+        // Get the container element
+        const textContainer = document.getElementById('text-container');
+      
+        // Function to type out and then erase text
+        function typeAndErase(text, index = 0) {
+          if (index < text.length) {
+            // Typing out the sentence
+            const currentText = textContainer.textContent || '';
+            textContainer.textContent = currentText + text[index];
+            setTimeout(() => {
+              typeAndErase(text, index + 1);
+            }, 100); // Adjust typing speed here
+          } else {
+            // Wait for 1 second before starting erasing
+            setTimeout(() => {
+              eraseText(text);
+            }, 1000); // Adjust delay before erase starts
+          }
+        }
+      
+        // Function to erase text
+        function eraseText(text, index = text.length) {
+          if (index >= 0) {
+            // Erasing the sentence
+            textContainer.textContent = text.substring(0, index);
+            setTimeout(() => {
+              eraseText(text, index - 1);
+            }, 50); // Adjust erasing speed here
+          } else {
+            // Wait for 1 second before starting the next sentence
+            setTimeout(() => {
+              const nextIndex = (sentences.indexOf(text) + 1) % sentences.length;
+              typeAndErase(sentences[nextIndex]);
+            }, 1000); // Adjust delay before next sentence starts
+          }
+        }
+      
+        // Start with the first sentence
+        typeAndErase(sentences[0]);
+      </script>
+      <script src="assets/js/aos/aos.js"></script>
+
 </body>
 
 </html>

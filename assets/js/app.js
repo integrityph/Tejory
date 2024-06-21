@@ -1,39 +1,4 @@
-var themeToggleDarkIcon = document.querySelectorAll('.theme-toggle-dark-icon');
-var themeToggleLightIcon = document.querySelectorAll('.theme-toggle-light-icon');
-var logo = document.getElementById('logo')
-var lightphone = document.getElementById('lightphone')
-var darkphone = document.getElementById('darkphone')
-var scanqr = document.getElementById('scan-qr')
-var scan_settings = document.getElementById('scan_settings')
-var navsettings = document.querySelector('#nav-setings>*')
-var menubar=document.getElementById('mobile-menu')
 
-function lighton() {
-  themeToggleDarkIcon.forEach(element => {
-    element.classList.remove('hidden')
-  });
-  themeToggleLightIcon.forEach(element => {
-    element.classList.add('hidden')
-  });
-  document.documentElement.classList.remove('dark');
-  localStorage.setItem('darkmode', 'false');
-  darkphone.classList.add('hidden')
-  lightphone.classList.remove('hidden')
-  logo.classList.add('invert')
-}
-function lightoff() {
-  themeToggleDarkIcon.forEach(element => {
-    element.classList.add('hidden')
-  });
-  themeToggleLightIcon.forEach(element => {
-    element.classList.remove('hidden')
-  });
-  document.documentElement.classList.add('dark');
-  localStorage.setItem('darkmode', 'true');
-  darkphone.classList.remove('hidden')
-  lightphone.classList.add('hidden')
-  logo.classList.remove('invert')
-}
 function darkparticles(){
   particlesJS('particles-js', {
     "particles": {
@@ -250,40 +215,8 @@ function lightparticles(){
   });
 }
 
-if (localStorage.getItem('darkmode') === 'true' || (!('darkmode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-  lightoff()
-  darkparticles()
-} else {
-  lighton()
-  lightparticles()
-}
 
-themeToggleLightIcon.forEach(element => {
-  element.addEventListener('click', () => {
-    lighton()
-    lightparticles()
-  
-  })
-});
-themeToggleDarkIcon.forEach(element => {
-  element.addEventListener('click', () => {
-    lightoff()
-      darkparticles()
-  })
-});
 
-navsettings.addEventListener('mouseover', () => {
-  scan_settings.classList.remove('hidden')
-})
-// navsettings.addEventListener('mouseout' ,()=>{
-//   scan_settings.classList.add('hidden')
-// })
-scan_settings.addEventListener('mouseover', () => {
-  scan_settings.classList.remove('hidden')
-})
-scan_settings.addEventListener('mouseout', () => {
-  scan_settings.classList.add('hidden')
-})
 
 fetch('https://api.coincap.io/v2/assets')
   .then((response) => response.json())
@@ -325,18 +258,3 @@ fetch('https://api.coincap.io/v2/assets')
     }
 
   })
-  var click=true;
-function menu(){
-  if(click===true){
-    menubar.classList.remove('hidden')
-   click=false
-  }
-  else{
-    menubar.classList.add('hidden')
-    click=true
-  }
-
-}
-
-
-

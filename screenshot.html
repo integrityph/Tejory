@@ -15,24 +15,180 @@
 
 <body>
     <div
-    class="loader fixed w-full h-dvh transition-colors duration-500 flex justify-center items-center flex-col gap-3"
-    style="background-color: rgba(248, 248, 248, 0.322); backdrop-filter: blur(2px);">
+    class="loader fixed w-full h-dvh transition-colors duration-500 flex justify-center items-center z-50 flex-col gap-3 bg-white dark:bg-neutral-900">
     <img class="w-24 animate-spin" src="assets/images/TEJORY_logo.png" alt="" sizes="" srcset="">
     <p class="text-black dark:text-white font-bold animate-pulse text-xl">Loading</p>
 </div>
-    <main class="w-full bg-white min-h-dvh h-auto dark:bg-neutral-900 transition-colors duration-500 p-5">
-        
+    <main class="w-full bg-white h-dvh dark:bg-neutral-900">
+        <nav class="bg-white fixed w-full z-40 dark:bg-neutral-900 ">
+            <div class="mx-auto px-2 sm:px-6 lg:px-8">
+              <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                  <!-- Mobile menu button-->
+                  <button type="button"
+                    class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                    aria-controls="mobile-menu" aria-expanded="false" onclick="menu()">
+                    <span class="absolute -inset-0.5"></span>
+                    <span class="sr-only">Open main menu</span>
+                    <!--
+                            Icon when menu is closed.
+                
+                            Menu open: "hidden", Menu closed: "block"
+                          -->
+                    <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                      aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <!--
+                            Icon when menu is open.
+                
+                            Menu open: "block", Menu closed: "hidden"
+                          -->
+                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                      aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                  <div class="flex flex-shrink-0 items-center">
+                    <img id="logo" class="h-6 w-auto " src="./assets/images/TEJORY-1.png" alt="" sizes="" srcset="">
+                  </div>
+                  <div class="hidden sm:ml-6 sm:block">
+                    <div class="flex space-x-4">
+                      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                      <a href="features.html"
+                        class="rounded-md px-3 py-2 text-sm font-semibold text-black hover:bg-gray-700 hover:text-white dark:text-white transition-colors duration-300">Features</a>
+                      <a href="screenshot.html"
+                        class="rounded-md px-3 py-2 text-sm font-semibold text-black hover:bg-gray-700 hover:text-white dark:text-white transition-colors duration-300">Screenshots</a>
+                      <a href="compliance.html"
+                        class="rounded-md px-3 py-2 text-sm font-semibold text-black hover:bg-gray-700 hover:text-white dark:text-white transition-colors duration-300">Compliance</a>
+                      <a href="blog.html"
+                        class="rounded-md px-3 py-2 text-sm font-semibold text-black hover:bg-gray-700 hover:text-white dark:text-white transition-colors duration-300">Blog</a>
+                      <a href="about.html"
+                        class="rounded-md px-3 py-2 text-sm font-semibold text-black hover:bg-gray-700 hover:text-white dark:text-white transition-colors duration-300">About</a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="hidden relative sm:flex absolute inset-y-0 right-0 items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                  <div class="flex gap-3 justify-center items-center">
+                    <svg class="theme-toggle-light-icon h-6 w-6 text-white hover:text-slate-600"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun">
+                      <circle cx="12" cy="12" r="5"></circle>
+                      <line x1="12" y1="1" x2="12" y2="3"></line>
+                      <line x1="12" y1="21" x2="12" y2="23"></line>
+                      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                      <line x1="1" y1="12" x2="3" y2="12"></line>
+                      <line x1="21" y1="12" x2="23" y2="12"></line>
+                      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="theme-toggle-dark-icon hidden hover:text-slate-600 w-5 h-5" fill="currentColor"
+                      viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <div class="relative" id="nav-setings">
+                      <svg id="scan-qr" class="h-6 w-6  hover:text-slate-600 dark:text-white "
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize">
+                        <path
+                          d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3">
+                        </path>
+                      </svg>
+                      <div
+                        class="hidden absolute -right-12 -bottom-48  bg-gray-300 p-2 w-40 flex flex-col justify-center items-center gap-2 rounded-lg rounded-t-none"
+                        id="scan_settings">
+                        <img src="assets/images/qr.png" alt="" class="rounded-xl w-32">
+                        <p class="text-center text-xs">Scan to Download App IOS & Android</p>
+                      </div>
+                    </div>
+      
+                    <svg id="language" class="h-6 w-6 hover:text-slate-600 dark:text-white "
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="feather feather-globe">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                      </path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="hidden" id="mobile-menu">
+              <div class="space-y-1 px-2 pb-3 pt-2">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="features.html"
+                  class="block rounded-md px-3 py-2 text-sm font-semibold text-black hover:bg-gray-700 hover:text-white dark:text-white transition-colors duration-300">Features</a>
+                <a href="screenshot.html"
+                  class="block rounded-md px-3 py-2 text-sm font-semibold text-black hover:bg-gray-700 hover:text-white dark:text-white transition-colors duration-300">Screenshots</a>
+                <a href="compliance.html"
+                  class="block rounded-md px-3 py-2 text-sm font-semibold text-black hover:bg-gray-700 hover:text-white dark:text-white transition-colors duration-300">Compliance</a>
+                <a href="blog.html"
+                  class="block rounded-md px-3 py-2 text-sm font-semibold text-black hover:bg-gray-700 hover:text-white dark:text-white transition-colors duration-300">Blog</a>
+                <a href="about.html"
+                  class="block rounded-md px-3 py-2 text-sm font-semibold text-black hover:bg-gray-700 hover:text-white dark:text-white transition-colors duration-300">About</a>
+              </div>
+              <div class="space-y-1 px-2 pb-3 pt-2 pl-5">
+                <svg class="theme-toggle-light-icon h-6 w-6 text-white hover:text-slate-600"
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun">
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="theme-toggle-dark-icon hidden hover:text-slate-600 w-5 h-5" fill="currentColor"
+                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+              </div>
+      
+            </div>
+          </nav>  
 
-<p class="dark:text-white font-bold text-4xl flex items-center gap-5"> <a href="index.html"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></a>  Screenshot</p>
+<p class="pt-20 dark:text-white font-bold text-4xl flex items-center gap-5 px-5">Screenshot</p>
 <div class="w-full flex flex-col md:flex-row justify-center items-center gap-5 p-5 md:p-0">  
-    <div class="bg-white p-4 rounded-3xl dark:bg-neutral-950 flex flex-col gap-2">
-    <img src="assets/images/darkmode" alt="" srcset="" class="w-72 rounded-2xl duration-1000" id="darkphone">
-   <p  class="text-xl font-bold text-white dark:text-white">Dark Theme</p>
+    <div
+    class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px]">
+    <div class="h-[32px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
+    <div class="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[124px] rounded-s-lg">
+    </div>
+    <div class="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[178px] rounded-s-lg">
+    </div>
+    <div class="h-[64px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
+    <div class="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-gray-800">
+        <img src="assets/images/lightmode" class="dark:hidden w-[272px] h-[572px]" alt="">
+        <img src="assets/images/darkmode" class="hidden dark:block w-[272px] h-[572px]" alt="">
+      </div>
+    <p class="dark:text-white mt-5 text-center font-bold">Android Version</p>
   </div>
-  <div class="bg-white p-4 rounded-3xl dark:bg-neutral-950 flex flex-col gap-2">
-    <img src="assets/images/lightmode" alt="" srcset="" class="w-72 rounded-2xl  duration-1000" id="lightphone">
-   <p  class="text-xl font-bold text-white dark:text-white">Light Theme</p>
+  <div
+  class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl">
+  <div class="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
+  <div class="h-[46px] w-[3px] bg-gray-800 absolute -start-[17px] top-[124px] rounded-s-lg"></div>
+  <div class="h-[46px] w-[3px] bg-gray-800 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
+  <div class="h-[64px] w-[3px] bg-gray-800 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
+  <div class="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-gray-800">
+    <img src="assets/images/lightmode" class="dark:hidden w-[272px] h-[572px]" alt="">
+    <img src="assets/images/darkmode" class="hidden dark:block w-[272px] h-[572px]" alt="">
   </div>
+  <p class="dark:text-white mt-5 text-center font-bold">iOS Version</p>
+</div>
+
+  </div>
+
     </main>
     <script src="assets/js/base.js"></script>
     <script src="assets/js/screenshot.js"></script>
