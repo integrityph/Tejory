@@ -11,15 +11,16 @@
     <link href="https://fonts.cdnfonts.com/css/nexa-bold" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/tailwind.config.js"></script>
+    <link href="assets/css/aos/aos.css" rel="stylesheet">
 </head>
 
 <body>
-    <div
+    <!-- <div
     class="loader fixed w-full h-dvh transition-colors duration-500 flex justify-center items-center z-50 flex-col gap-3 bg-white dark:bg-neutral-900">
     <img class="w-24 animate-spin" src="assets/images/TEJORY_logo.png" alt="" sizes="" srcset="">
     <p class="text-black dark:text-white font-bold animate-pulse text-xl">Loading</p>
-</div>
-    <main class="w-full bg-white h-dvh dark:bg-neutral-900">
+</div> -->
+    <main class="w-full bg-white h-auto min-h-dvh dark:bg-neutral-900">
         <nav class="bg-white fixed w-full z-40 dark:bg-neutral-900 ">
             <div class="mx-auto px-2 sm:px-6 lg:px-8">
               <div class="relative flex h-16 items-center justify-between">
@@ -52,7 +53,7 @@
                 </div>
                 <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                   <div class="flex flex-shrink-0 items-center">
-                    <img id="logo" class="h-6 w-auto " src="./assets/images/TEJORY-1.png" alt="" sizes="" srcset="">
+                    <a href="index.html"><img id="logo" class="h-6 w-auto " src="./assets/images/TEJORY-1.png" alt="" sizes="" srcset=""></a>
                   </div>
                   <div class="hidden sm:ml-6 sm:block">
                     <div class="flex space-x-4">
@@ -158,8 +159,9 @@
             </div>
           </nav>  
 
-<p class="pt-20 dark:text-white font-bold text-4xl flex items-center gap-5 px-5">Screenshot</p>
-<div class="w-full flex flex-col md:flex-row justify-center items-center gap-5 p-5 md:p-0">  
+<p class="pt-20 dark:text-white font-bold text-4xl flex items-center gap-5 px-5 mb-10">Screenshot</p>
+<div class="w-full h-auto  flex flex-col gap-[1rem] md:flex-row justify-evenly items-center  md:p-0 ">  
+    <div class="h-auto flex flex-col justify-center item-center gap-2" data-aos="fade-right">
     <div
     class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px]">
     <div class="h-[32px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
@@ -172,8 +174,10 @@
         <img src="assets/images/lightmode" class="dark:hidden w-[272px] h-[572px]" alt="">
         <img src="assets/images/darkmode" class="hidden dark:block w-[272px] h-[572px]" alt="">
       </div>
-    <p class="dark:text-white mt-5 text-center font-bold">Android Version</p>
   </div>
+  <p class="dark:text-white  text-center font-bold">Android Version</p>
+</div>
+  <div class="h-auto flex flex-col justify-center item-center gap-2" data-aos="fade-left">
   <div
   class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl">
   <div class="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
@@ -184,14 +188,17 @@
     <img src="assets/images/lightmode" class="dark:hidden w-[272px] h-[572px]" alt="">
     <img src="assets/images/darkmode" class="hidden dark:block w-[272px] h-[572px]" alt="">
   </div>
-  <p class="dark:text-white mt-5 text-center font-bold">iOS Version</p>
 </div>
+<p class="dark:text-white  text-center font-bold">iOS Version</p>
+</div>
+
 
   </div>
 
     </main>
     <script src="assets/js/base.js"></script>
     <script src="assets/js/screenshot.js"></script>
+    <script src="assets/js/aos/aos.js"></script>
 </body>
 
 </html>
