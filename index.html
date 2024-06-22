@@ -183,7 +183,40 @@
       </div>
       <div class="ip w-full lg:w-1/2 relative" style="height: 600px;" data-aos="fade-left">
 
+        <div
+          class="absolute bg-transparent w-full h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-x-auto rounded-2xl">
+          <table
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-sm rounded-2xl text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
+            <thead class="text-xs text-white uppercase bg-black dark:bg-gray-700 dark:text-white"
+              style="background-color: rgba(37, 37, 37, 0.212); backdrop-filter: blur(3px);">
+              <tr>
+                <th scope="col" class="px-6 py-3">
+                  Rank
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Coin name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Price
+                </th>
+              </tr>
+            </thead>
+            <tbody id="coin-body">
+              <tr class="text-white border-b dark:text-white dark:bg-gray-800 dark:border-gray-700 hidden" id="mytemp"
+                style="background-color: rgba(0, 0, 0, 0.185); backdrop-filter: blur(1px);">
+                <td class="px-6 py-4 font-bold" data-coin="rank">
+                </td>
+                <th scope="row" class="px-6 py-4 font-bold uppercase text-white whitespace-nowrap dark:text-white"
+                  data-coin="name">
+                </th>
+                <td class="px-0 md:px-6 py-4 font-bold" data-coin="price">
+                </td>
+              </tr>
 
+
+            </tbody>
+          </table>
+        </div>
       </div>
 
     </section>
@@ -233,40 +266,7 @@
     </section>
     <section class="h-full lg:h-dvh w-full px-0 md:px-10  dark:bg-transparent relative">
 
-      <div
-      class="absolute bg-transparent w-full h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-x-auto rounded-2xl">
-      <table
-        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-sm rounded-2xl text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
-        <thead class="text-xs text-white uppercase bg-black dark:bg-gray-700 dark:text-white"
-          style="background-color: rgba(37, 37, 37, 0.212); backdrop-filter: blur(3px);">
-          <tr>
-            <th scope="col" class="px-6 py-3">
-              Rank
-            </th>
-            <th scope="col" class="px-6 py-3">
-              Coin name
-            </th>
-            <th scope="col" class="px-6 py-3">
-              Price
-            </th>
-          </tr>
-        </thead>
-        <tbody id="coin-body">
-          <tr class="text-white border-b dark:text-white dark:bg-gray-800 dark:border-gray-700 hidden" id="mytemp"
-            style="background-color: rgba(0, 0, 0, 0.185); backdrop-filter: blur(1px);">
-            <td class="px-6 py-4 font-bold" data-coin="rank">
-            </td>
-            <th scope="row" class="px-6 py-4 font-bold uppercase text-white whitespace-nowrap dark:text-white"
-              data-coin="name">
-            </th>
-            <td class="px-0 md:px-6 py-4 font-bold" data-coin="price">
-            </td>
-          </tr>
-
-
-        </tbody>
-      </table>
-    </div>
+  
 
 
   
