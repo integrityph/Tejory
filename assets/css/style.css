@@ -43,7 +43,12 @@
         opacity: 0;
     }
 }
-
+.swiper-pagination-bullet{
+    background-color: red!important;
+}
+.swiper-pagination-bullet-active{
+background: red !important;
+}
 
 html::-webkit-scrollbar-track
 {
