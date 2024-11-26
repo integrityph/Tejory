@@ -1,0 +1,21 @@
+{
+  "name": "assets",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:tailwind-style": "tailwindcss -i ./css/style.css -o ./css/public/style.css",
+    "watch:tailwind-style": "tailwindcss -i ./css/style.css -o ./css/public/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "flowbite": "^2.5.2"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.14"
+  }
+}
