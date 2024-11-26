@@ -11,6 +11,9 @@ module.exports = {
       colors: {
         clifford: '#da373d',
       },
+      height: {
+        calc1: 'calc(100% - 140px)',
+      }
     }
   },
   plugins: [],

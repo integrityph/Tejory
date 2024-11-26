@@ -83,7 +83,3 @@ html::-webkit-scrollbar-thumb {
   background-color: #374151;
   border: 2px solid #374151;
 }
-
-.h-calc-1 {
-  height: calc(100% - 140px);
-}
