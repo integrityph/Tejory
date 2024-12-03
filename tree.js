@@ -53,9 +53,9 @@ scene.add(ambientLight)
 let controls = new OrbitControls(camera, renderer.domElement);
 controls.autoRotate = true;
 controls.maxDistance = 1;
-controls.minDistance = 5;
-controls.enablePan = false;
-controls.enableRotate = false;
+controls.minDistance = 4;
+// controls.enablePan = false;
+// controls.enableRotate = false;
 controls.autoRotateSpeed = 1;
 console.log(controls)
 
