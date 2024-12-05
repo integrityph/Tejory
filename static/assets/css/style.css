@@ -127,7 +127,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .card-content {
-  background: #13161c;
+  background: #252931;
   border-radius: inherit;
   transition: all 0.25s;
   /* height: calc(100% - 2px);
