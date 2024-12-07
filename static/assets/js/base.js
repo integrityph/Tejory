@@ -136,3 +136,30 @@ wrapper.addEventListener("mousemove", (event) => {
       cards[index + 1].classList.remove('hidden')      
     })
   });
+
+  var faqList = document.querySelectorAll('#faq-list li')
+  var faqDesc = document.querySelectorAll('#faq-desc p')
+
+  faqList.forEach((e, index) => {
+    e.addEventListener('click', () => {
+      faqList.forEach(a => {
+        a.classList.remove('active')
+      })
+      e.classList.add('active')
+      faqList.forEach(x => {
+        if(x.classList.contains('active')){
+          x.classList.add('dark:bg-gray-800', 'bg-gray-200')
+          x.classList.remove('dark:bg-gray-700', 'bg-gray-50')
+        } else {
+          x.classList.remove('dark:bg-gray-800', 'bg-gray-200')
+          x.classList.add('dark:bg-gray-700', 'bg-gray-50')
+        }
+      })
+
+      faqDesc.forEach(e => {
+        e.classList.add('hidden')
+        faqDesc[index].classList.remove('hidden')
+      })
+
+    })
+  });
