@@ -1299,8 +1299,8 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[url\(\'\/static\/assets\/images\/integrity\.jpg\'\)\] {
-  background-image: url('/static/assets/images/integrity.jpg');
+.bg-\[url\(\'static\/assets\/images\/integrity\.jpg\'\)\] {
+  background-image: url('static/assets/images/integrity.jpg');
 }
 
 .bg-cover {
