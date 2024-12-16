@@ -155,3 +155,50 @@ html::-webkit-scrollbar-thumb {
     transform: translateY(0);
   }
 }
+
+/* From Uiverse.io by benjimich */ 
+.container {
+  display: flex;
+  position: relative;
+}
+
+.button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  padding: .5em 1.5em .5em 0;
+  font-weight: 600;
+  transition: all .3s ease;
+}
+
+.arrow {
+  fill: #94a1b2;
+  position: absolute;
+  pointer-events: none;
+  width: 24px;
+  right: 0;
+  top: 25%;
+  transition: all .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.button:hover {
+  letter-spacing: 2px;
+}
+
+.button:hover ~.second {
+  opacity: .66;
+  right: -20px;
+  transition-delay: 50ms;
+}
+
+.button:hover ~.third {
+  opacity: .33;
+  right: -40px;
+  transition-delay: 100ms;
+}
+
+.second, 
+.third {
+  opacity: 0;
+}

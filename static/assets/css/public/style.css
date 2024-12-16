@@ -770,12 +770,12 @@ video {
   margin-top: 2.5rem;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
 .mt-20 {
   margin-top: 5rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .block {
@@ -1264,6 +1264,11 @@ video {
   background-color: rgb(249 250 251 / 0.5);
 }
 
+.bg-gray-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity, 1));
+}
+
 .bg-gray-600\/50 {
   background-color: rgb(75 85 99 / 0.5);
 }
@@ -1307,16 +1312,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-gray-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(75 85 99 / var(--tw-bg-opacity, 1));
-}
-
-.bg-gray-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 114 128 / var(--tw-bg-opacity, 1));
-}
-
 .bg-\[url\(\'static\/assets\/images\/integrity\.jpg\'\)\] {
   background-image: url('static/assets/images/integrity.jpg');
 }
@@ -1339,6 +1334,10 @@ video {
 
 .stroke-black {
   stroke: #000;
+}
+
+.stroke-white {
+  stroke: #fff;
 }
 
 .object-contain {
@@ -1451,14 +1450,14 @@ video {
   padding-bottom: 1rem;
 }
 
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
 .py-40 {
   padding-top: 10rem;
   padding-bottom: 10rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .pb-3 {
@@ -1487,6 +1486,10 @@ video {
 
 .pt-20 {
   padding-top: 5rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
 }
 
 .text-left {
@@ -1900,6 +1903,54 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
+/* From Uiverse.io by benjimich */
+
+.container {
+  display: flex;
+  position: relative;
+}
+
+.button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  padding: .5em 1.5em .5em 0;
+  font-weight: 600;
+  transition: all .3s ease;
+}
+
+.arrow {
+  fill: #94a1b2;
+  position: absolute;
+  pointer-events: none;
+  width: 24px;
+  right: 0;
+  top: 25%;
+  transition: all .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.button:hover {
+  letter-spacing: 2px;
+}
+
+.button:hover ~.second {
+  opacity: .66;
+  right: -20px;
+  transition-delay: 50ms;
+}
+
+.button:hover ~.third {
+  opacity: .33;
+  right: -40px;
+  transition-delay: 100ms;
+}
+
+.second, 
+.third {
+  opacity: 0;
+}
+
 .hover\:scale-90:hover {
   --tw-scale-x: .9;
   --tw-scale-y: .9;
@@ -2272,10 +2323,6 @@ html::-webkit-scrollbar-thumb {
     display: flex;
   }
 
-  .md\:hidden {
-    display: none;
-  }
-
   .md\:h-80 {
     height: 20rem;
   }
@@ -2309,6 +2356,10 @@ html::-webkit-scrollbar-thumb {
     padding: 0px;
   }
 
+  .md\:p-10 {
+    padding: 2.5rem;
+  }
+
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -2321,6 +2372,11 @@ html::-webkit-scrollbar-thumb {
 
   .md\:pt-20 {
     padding-top: 5rem;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .md\:text-4xl {
@@ -2350,10 +2406,6 @@ html::-webkit-scrollbar-thumb {
 }
 
 @media (min-width: 1024px) {
-  .lg\:block {
-    display: block;
-  }
-
   .lg\:hidden {
     display: none;
   }
