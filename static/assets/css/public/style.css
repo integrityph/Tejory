@@ -2374,6 +2374,10 @@ html::-webkit-scrollbar-thumb {
     height: 20rem;
   }
 
+  .md\:h-dvh {
+    height: 100dvh;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
