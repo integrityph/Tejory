@@ -1,65 +1,81 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
-import { ColladaLoader } from 'three/addons/loaders/ColladaLoader.js';
-import { FBXLoader } from 'three/addons/loaders/FBXLoader.js';
-
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(3,1.5,1);
+const camera = new THREE.PerspectiveCamera(3, 1.5, 1);
 camera.position.set(2, 1, 1);
 
-var ip = document.querySelector('.ip')
-var test = getComputedStyle(ip)
-var [w, h] = [parseInt(test.width), parseInt(test.height)]; 
+var ip = document.querySelector('.ip');
+var test = getComputedStyle(ip);
+var [w, h] = [parseInt(test.width), parseInt(test.height)];
 
 let mouseX = window.innerWidth / 2;
 let mouseY = window.innerHeight / 2;
 let obj;
 
-const loader = new ColladaLoader().setPath('tejor/');
+// Create a loading manager to control the loading process
+const loadingManager = new THREE.LoadingManager();
 
-loader.load(
-  'Tejory.dae',
+// Track progress of the loading
+loadingManager.onStart = function (url, itemsLoaded, itemsTotal) {
+  console.log(`Started loading ${url}. Loaded ${itemsLoaded} of ${itemsTotal} files.`);
+};
 
-  function (gltf) {
-    obj = gltf.scene;
-    scene.add(obj)
-  }
-)
+loadingManager.onLoad = function () {
+  console.log('All assets loaded');
+};
 
-const renderer = new THREE.WebGLRenderer({ alpha: true  });
+loadingManager.onProgress = function (url, itemsLoaded, itemsTotal) {
+  console.log(`Loading ${url}. ${itemsLoaded} of ${itemsTotal} files loaded.`);
+};
+
+loadingManager.onError = function (url) {
+  console.error(`There was an error loading ${url}`);
+};
+
+// Initialize the GLTF loader with Draco compression
+const loader = new GLTFLoader(loadingManager).setPath('tejory-card/');
+const dracoloader = new DRACOLoader();
+dracoloader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
+dracoloader.setDecoderConfig({ type: 'js' });
+loader.setDRACOLoader(dracoloader);
+
+// Load the model asynchronously
+loader.load('tejory-card.glb', function (gltf) {
+  obj = gltf.scene;
+  scene.add(obj);
+});
+
+const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setSize(w, h, false);
 
-ip.appendChild(renderer.domElement); 
+ip.appendChild(renderer.domElement);
 
-
+// Set up lighting
 const topLight = new THREE.DirectionalLight(0xffffff, 10);
-topLight.position.set(10, 6, 1)
+topLight.position.set(10, 6, 1);
 topLight.castShadow = true;
 scene.add(topLight);
 
 const backLight = new THREE.DirectionalLight(0xffffff, 10);
-backLight.position.set(-1, -1, -1)
+backLight.position.set(-1, -1, -1);
 backLight.castShadow = true;
 scene.add(backLight);
 
 const ambientLight = new THREE.AmbientLight(0xffffff, 1);
-scene.add(ambientLight)
+scene.add(ambientLight);
 
-// scene.background = new THREE.Color(0x212529);
-
+// Set up the orbit controls
 let controls = new OrbitControls(camera, renderer.domElement);
 controls.autoRotate = true;
-controls.maxDistance = 1;
-controls.minDistance = 4;
-// controls.enablePan = false;
-// controls.enableRotate = false;
+controls.maxDistance = 10;
+controls.minDistance = 40;
 controls.autoRotateSpeed = 1;
-console.log(controls)
 
 function animate() {
+  // Use requestAnimationFrame to ensure smooth updates and prevent FPS drops
   requestAnimationFrame(animate);
 
   controls.update();
