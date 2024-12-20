@@ -248,7 +248,7 @@ fetch('https://api.coincap.io/v2/assets')
         var number=coins[i].priceUsd
      
         rounded = Math.round(number * 100) / 100
-        console.log(rounded)
+        // console.log(rounded)
         tdtemplate.querySelector("[data-coin='price']").innerText = "$ "+rounded;
         coinbody.appendChild(tdtemplate)
         counter++;
