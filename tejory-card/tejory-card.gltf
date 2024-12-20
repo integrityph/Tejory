@@ -5,8 +5,7 @@
 	},
 	"extensionsUsed":[
 		"KHR_draco_mesh_compression",
-		"KHR_materials_specular",
-		"KHR_materials_ior"
+		"KHR_materials_specular"
 	],
 	"extensionsRequired":[
 		"KHR_draco_mesh_compression"
@@ -25,20 +24,6 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"Tejory",
-			"scale":[
-				0.09487179666757584,
-				0.09487179666757584,
-				0.09487179666757584
-			],
-			"translation":[
-				-0.4558592736721039,
-				0.0029977140948176384,
-				0.431884765625
-			]
-		},
-		{
-			"mesh":1,
 			"name":"Card",
 			"scale":[
 				0.8560000061988831,
@@ -47,22 +32,26 @@
 			]
 		},
 		{
+			"mesh":1,
+			"name":"Tejory Text",
+			"translation":[
+				-0.7414430379867554,
+				0,
+				0.4410635232925415
+			]
+		},
+		{
 			"mesh":2,
-			"name":"NFC",
+			"name":"NFC Symbol",
 			"rotation":[
 				0,
 				0.7071068286895752,
 				0,
-				0.7071067690849304
-			],
-			"scale":[
-				0.9306876063346863,
-				0.9306876063346863,
-				0.9306876063346863
+				0.7071068286895752
 			],
 			"translation":[
-				-0.6608723402023315,
-				0.003846147796139121,
+				-0.6800000071525574,
+				0,
 				0
 			]
 		}
@@ -70,17 +59,17 @@
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"Material",
-			"normalTexture":{
-				"index":0
+			"extensions":{
+				"KHR_materials_specular":{
+					"specularFactor":0.4000000059604645
+				}
 			},
+			"name":"Front",
 			"pbrMetallicRoughness":{
-				"baseColorFactor":[
-					0.800000011920929,
-					0.800000011920929,
-					0.800000011920929,
-					1
-				],
+				"baseColorTexture":{
+					"index":0
+				},
+				"metallicFactor":0,
 				"metallicRoughnessTexture":{
 					"index":1
 				}
@@ -91,22 +80,16 @@
 			"extensions":{
 				"KHR_materials_specular":{
 					"specularFactor":0.4000000059604645
-				},
-				"KHR_materials_ior":{
-					"ior":1.4500000476837158
 				}
 			},
-			"name":"FRONT",
+			"name":"Back",
 			"pbrMetallicRoughness":{
-				"baseColorFactor":[
-					0.010960021056234837,
-					0.010960102081298828,
-					0.010960097424685955,
-					1
-				],
-				"metallicFactor":0.5,
-				"metallicRoughnessTexture":{
+				"baseColorTexture":{
 					"index":2
+				},
+				"metallicFactor":0,
+				"metallicRoughnessTexture":{
+					"index":3
 				}
 			}
 		},
@@ -115,42 +98,11 @@
 			"extensions":{
 				"KHR_materials_specular":{
 					"specularFactor":0.4000000059604645
-				},
-				"KHR_materials_ior":{
-					"ior":1.4500000476837158
 				}
 			},
-			"name":"BACK",
-			"pbrMetallicRoughness":{
-				"baseColorTexture":{
-					"index":3
-				},
-				"metallicFactor":0.5,
-				"metallicRoughnessTexture":{
-					"index":4
-				}
-			}
-		},
-		{
-			"doubleSided":true,
-			"name":"side-base",
-			"pbrMetallicRoughness":{
-				"baseColorFactor":[
-					0.010960097424685955,
-					0.010960093699395657,
-					0.010960093699395657,
-					1
-				],
-				"metallicFactor":0,
-				"roughnessFactor":0.5
-			}
-		},
-		{
-			"doubleSided":true,
-			"name":"NFC Texture",
+			"name":"Tejory Text",
 			"normalTexture":{
-				"index":5,
-				"scale":0.5
+				"index":4
 			},
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -160,14 +112,37 @@
 					1
 				],
 				"metallicRoughnessTexture":{
-					"index":6
+					"index":5
+				}
+			}
+		},
+		{
+			"doubleSided":true,
+			"extensions":{
+				"KHR_materials_specular":{
+					"specularFactor":0.4000000059604645
+				}
+			},
+			"name":"NFC Symbol",
+			"normalTexture":{
+				"index":6
+			},
+			"pbrMetallicRoughness":{
+				"baseColorFactor":[
+					0.800000011920929,
+					0.800000011920929,
+					0.800000011920929,
+					1
+				],
+				"metallicRoughnessTexture":{
+					"index":7
 				}
 			}
 		}
 	],
 	"meshes":[
 		{
-			"name":"Tejory",
+			"name":"Plane",
 			"primitives":[
 				{
 					"attributes":{
@@ -188,12 +163,7 @@
 					"indices":3,
 					"material":0,
 					"mode":4
-				}
-			]
-		},
-		{
-			"name":"Plane",
-			"primitives":[
+				},
 				{
 					"attributes":{
 						"POSITION":4,
@@ -213,7 +183,12 @@
 					"indices":7,
 					"material":1,
 					"mode":4
-				},
+				}
+			]
+		},
+		{
+			"name":"Text",
+			"primitives":[
 				{
 					"attributes":{
 						"POSITION":8,
@@ -233,26 +208,6 @@
 					"indices":11,
 					"material":2,
 					"mode":4
-				},
-				{
-					"attributes":{
-						"POSITION":12,
-						"NORMAL":13,
-						"TEXCOORD_0":14
-					},
-					"extensions":{
-						"KHR_draco_mesh_compression":{
-							"bufferView":3,
-							"attributes":{
-								"POSITION":0,
-								"NORMAL":1,
-								"TEXCOORD_0":2
-							}
-						}
-					},
-					"indices":15,
-					"material":3,
-					"mode":4
 				}
 			]
 		},
@@ -261,20 +216,20 @@
 			"primitives":[
 				{
 					"attributes":{
-						"POSITION":16,
-						"NORMAL":17
+						"POSITION":12,
+						"NORMAL":13
 					},
 					"extensions":{
 						"KHR_draco_mesh_compression":{
-							"bufferView":4,
+							"bufferView":3,
 							"attributes":{
 								"POSITION":0,
 								"NORMAL":1
 							}
 						}
 					},
-					"indices":18,
-					"material":4,
+					"indices":14,
+					"material":3,
 					"mode":4
 				}
 			]
@@ -286,7 +241,7 @@
 			"source":0
 		},
 		{
-			"sampler":0,
+			"sampler":1,
 			"source":1
 		},
 		{
@@ -295,31 +250,30 @@
 		},
 		{
 			"sampler":1,
+			"source":1
+		},
+		{
+			"sampler":1,
 			"source":3
 		},
 		{
-			"sampler":0,
-			"source":2
+			"sampler":1,
+			"source":4
 		},
 		{
-			"sampler":0,
-			"source":0
+			"sampler":1,
+			"source":3
 		},
 		{
-			"sampler":0,
+			"sampler":1,
 			"source":4
 		}
 	],
 	"images":[
 		{
-			"mimeType":"image/jpeg",
-			"name":"Poliigon_MetalGoldPaint_7253_BaseColor",
-			"uri":"Poliigon_MetalGoldPaint_7253_BaseColor.jpg"
-		},
-		{
 			"mimeType":"image/png",
-			"name":"Poliigon_MetalGoldPaint_7253_Metallic-Poliigon_MetalGoldPaint_7253_Roughness",
-			"uri":"Poliigon_MetalGoldPaint_7253_Metallic-Poliigon_MetalGoldPaint_7253_Roughness.png"
+			"name":"tejory-nfc-no-bg-high-res",
+			"uri":"tejory-nfc-no-bg-high-res.png"
 		},
 		{
 			"mimeType":"image/png",
@@ -328,204 +282,174 @@
 		},
 		{
 			"mimeType":"image/png",
-			"name":"BACK-v2",
-			"uri":"BACK-v2.png"
+			"name":"tejory-nfc-back-no-bg-high-res",
+			"uri":"tejory-nfc-back-no-bg-high-res.png"
 		},
 		{
 			"mimeType":"image/png",
-			"name":"Poliigon_MetalGoldPaint_7253_Metallic-Poliigon_MetalGoldPaint_7253_Roughness",
-			"uri":"Poliigon_MetalGoldPaint_7253_Metallic-Poliigon_MetalGoldPaint_7253_Roughness-1.png"
+			"name":"gold-scuffed_normal",
+			"uri":"gold-scuffed_normal.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"gold-scuffed_metallic-gold-scuffed_roughness",
+			"uri":"gold-scuffed_metallic-gold-scuffed_roughness.png"
 		}
 	],
 	"accessors":[
 		{
 			"componentType":5126,
-			"count":1634,
+			"count":140,
 			"max":[
-				2.844435930252075,
-				0.07500000298023224,
-				0.02222793735563755
-			],
-			"min":[
-				-2.813793182373047,
-				0,
-				-0.9548299312591553
-			],
-			"type":"VEC3"
-		},
-		{
-			"componentType":5126,
-			"count":1634,
-			"type":"VEC3"
-		},
-		{
-			"componentType":5126,
-			"count":1634,
-			"type":"VEC2"
-		},
-		{
-			"componentType":5123,
-			"count":3306,
-			"type":"SCALAR"
-		},
-		{
-			"componentType":5126,
-			"count":164,
-			"max":[
-				1,
+				0.9988042712211609,
 				0.7599999904632568,
-				1
+				0.9988042712211609
 			],
 			"min":[
-				-1,
-				0.7599768042564392,
-				-1
+				-0.9988042712211609,
+				0,
+				-0.9988042712211609
 			],
 			"type":"VEC3"
 		},
 		{
 			"componentType":5126,
-			"count":164,
+			"count":140,
 			"type":"VEC3"
 		},
 		{
 			"componentType":5126,
-			"count":164,
+			"count":140,
 			"type":"VEC2"
 		},
 		{
 			"componentType":5123,
-			"count":486,
+			"count":246,
 			"type":"SCALAR"
 		},
 		{
 			"componentType":5126,
-			"count":164,
+			"count":28,
 			"max":[
-				1,
+				0.9988042712211609,
 				0,
-				1
+				0.9988042712211609
 			],
 			"min":[
-				-1,
+				-0.9988042712211609,
 				0,
-				-1
+				-0.9988042712211609
 			],
 			"type":"VEC3"
 		},
 		{
 			"componentType":5126,
-			"count":164,
+			"count":28,
 			"type":"VEC3"
 		},
 		{
 			"componentType":5126,
-			"count":164,
+			"count":28,
 			"type":"VEC2"
 		},
 		{
 			"componentType":5123,
-			"count":486,
+			"count":78,
 			"type":"SCALAR"
 		},
 		{
 			"componentType":5126,
-			"count":332,
+			"count":1346,
 			"max":[
-				1,
-				0.7599999904632568,
-				1
+				0.668181836605072,
+				0.007600000128149986,
+				0.002615051344037056
 			],
 			"min":[
-				-1,
-				0,
-				-1
+				0.0025078370235860348,
+				0.003800000064074993,
+				-0.1123824492096901
 			],
 			"type":"VEC3"
 		},
 		{
 			"componentType":5126,
-			"count":332,
+			"count":1346,
 			"type":"VEC3"
 		},
 		{
 			"componentType":5126,
-			"count":332,
+			"count":1346,
 			"type":"VEC2"
 		},
 		{
 			"componentType":5123,
-			"count":984,
+			"count":3684,
 			"type":"SCALAR"
 		},
 		{
 			"componentType":5126,
-			"count":566,
+			"count":156,
 			"max":[
-				0.08221451193094254,
-				0.005085823126137257,
-				0.032761912792921066
+				0.0822133868932724,
+				0.007600000128149986,
+				0.028928440064191818
 			],
 			"min":[
-				-0.08237961679697037,
-				-0.0010001807240769267,
-				-0.06446631252765656
+				-0.0823807418346405,
+				0.003800000064074993,
+				-0.0650697872042656
 			],
 			"type":"VEC3"
 		},
 		{
 			"componentType":5126,
-			"count":566,
+			"count":156,
 			"type":"VEC3"
 		},
 		{
 			"componentType":5123,
-			"count":1008,
+			"count":900,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":10321,
+			"byteLength":755,
 			"byteOffset":0
 		},
 		{
 			"buffer":0,
-			"byteLength":1172,
-			"byteOffset":10324
+			"byteLength":341,
+			"byteOffset":756
 		},
 		{
 			"buffer":0,
-			"byteLength":1170,
-			"byteOffset":11496
+			"byteLength":7588,
+			"byteOffset":1100
 		},
 		{
 			"buffer":0,
-			"byteLength":932,
-			"byteOffset":12668
-		},
-		{
-			"buffer":0,
-			"byteLength":2856,
-			"byteOffset":13600
+			"byteLength":881,
+			"byteOffset":8688
 		}
 	],
 	"samplers":[
 		{
 			"magFilter":9729,
-			"minFilter":9987
-		},
-		{
-			"magFilter":9729,
 			"minFilter":9987,
 			"wrapS":33071,
 			"wrapT":33071
+		},
+		{
+			"magFilter":9729,
+			"minFilter":9987
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":16456,
+			"byteLength":9572,
 			"uri":"tejory-card.bin"
 		}
 	]

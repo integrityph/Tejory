@@ -43,7 +43,7 @@ dracoloader.setDecoderConfig({ type: 'js' });
 loader.setDRACOLoader(dracoloader);
 
 // Load the model asynchronously
-loader.load('tejory-card.glb', function (gltf) {
+loader.load('tejory-card.gltf', function (gltf) {
   obj = gltf.scene;
   scene.add(obj);
 });
