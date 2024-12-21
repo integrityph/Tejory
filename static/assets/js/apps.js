@@ -25,10 +25,18 @@ var appLink = document.querySelector('#AppLink')
 var redirectLink = document.querySelector('#redirectLink')
 var counter = 5;
 
-if(getOS() == 'Linux'){
-  appLink.href = "https://integrityph.github.io/Tejory/"
+if(getOS() == 'Mac OS'){
+  appLink.href = "https://play.google.com/store/apps/details?id=ph.integritynet.tejory"
+} else if (getOS() == 'iOS') {
+  appLink.href = "https://play.google.com/store/apps/details?id=ph.integritynet.tejory"
+} else if (getOS() == 'Android') {
+  appLink.href = "https://play.google.com/store/apps/details?id=ph.integritynet.tejory"
+} else if (getOS() == 'Windows') {
+  appLink.href = "https://play.google.com/store/apps/details?id=ph.integritynet.tejory"
+} else if (getOS() == 'Linux'){
+  appLink.href = "https://play.google.com/store/apps/details?id=ph.integritynet.tejory"
 } else {
-  appLink.href = "https://integrityph.github.io/Tejory/"
+  appLink.href = "https://play.google.com/store/apps/details?id=ph.integritynet.tejory"
 }
 
 setInterval(function() {
