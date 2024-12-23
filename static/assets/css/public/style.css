@@ -1060,6 +1060,10 @@ video {
   align-items: center;
 }
 
+.items-stretch {
+  align-items: stretch;
+}
+
 .justify-start {
   justify-content: flex-start;
 }
@@ -2393,6 +2397,10 @@ html::-webkit-scrollbar-thumb {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:items-baseline {
+    align-items: baseline;
   }
 
   .md\:items-stretch {
