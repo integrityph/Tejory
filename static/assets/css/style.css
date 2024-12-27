@@ -202,3 +202,9 @@ html::-webkit-scrollbar-thumb {
 .third {
   opacity: 0;
 }
+
+@media (max-width: 768px) {
+  .card :is(svg, h2, p) {
+    opacity: 1;
+  }
+}
