@@ -1490,26 +1490,6 @@ video {
   padding-bottom: 1.25rem;
 }
 
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
-.px-16 {
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-.px-32 {
-  padding-left: 8rem;
-  padding-right: 8rem;
-}
-
 .pb-3 {
   padding-bottom: 0.75rem;
 }
@@ -2376,16 +2356,8 @@ html::-webkit-scrollbar-thumb {
     margin-top: 5rem;
   }
 
-  .md\:block {
-    display: block;
-  }
-
   .md\:flex {
     display: flex;
-  }
-
-  .md\:hidden {
-    display: none;
   }
 
   .md\:h-80 {
@@ -2410,14 +2382,6 @@ html::-webkit-scrollbar-thumb {
 
   .md\:flex-row {
     flex-direction: row;
-  }
-
-  .md\:items-stretch {
-    align-items: stretch;
-  }
-
-  .md\:justify-start {
-    justify-content: flex-start;
   }
 
   .md\:gap-10 {
@@ -2453,6 +2417,11 @@ html::-webkit-scrollbar-thumb {
     padding-right: 2.5rem;
   }
 
+  .md\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
   .md\:px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -2461,16 +2430,6 @@ html::-webkit-scrollbar-thumb {
   .md\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-  }
-
-  .md\:px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
-  .md\:px-32 {
-    padding-left: 8rem;
-    padding-right: 8rem;
   }
 
   .md\:pt-20 {
@@ -2600,6 +2559,11 @@ html::-webkit-scrollbar-thumb {
     padding: 8rem;
   }
 
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -2618,11 +2582,6 @@ html::-webkit-scrollbar-thumb {
   .lg\:py-56 {
     padding-top: 14rem;
     padding-bottom: 14rem;
-  }
-
-  .lg\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
   }
 
   .lg\:pr-0 {
@@ -2665,24 +2624,6 @@ html::-webkit-scrollbar-thumb {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .xl\:hidden {
-    display: none;
-  }
-
-  .xl\:w-1\/2 {
-    width: 50%;
-  }
-
-  .xl\:w-3\/5 {
-    width: 60%;
-  }
-
-  .xl\:flex-row {
-    flex-direction: row;
   }
 }
 
