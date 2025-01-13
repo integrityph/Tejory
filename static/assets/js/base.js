@@ -90,18 +90,18 @@ var navsettings = document.querySelector('#nav-setings>*')
     })
   });
 
-  navsettings.addEventListener('mouseover', () => {
-    scan_settings.classList.remove('hidden')
-  })
+  // navsettings.addEventListener('mouseover', () => {
+  //   scan_settings.classList.remove('hidden')
+  // })
   // navsettings.addEventListener('mouseout' ,()=>{
   //   scan_settings.classList.add('hidden')
   // })
-  scan_settings.addEventListener('mouseover', () => {
-    scan_settings.classList.remove('hidden')
-  })
-  scan_settings.addEventListener('mouseout', () => {
-    scan_settings.classList.add('hidden')
-  })
+  // scan_settings.addEventListener('mouseover', () => {
+  //   scan_settings.classList.remove('hidden')
+  // })
+  // scan_settings.addEventListener('mouseout', () => {
+  //   scan_settings.classList.add('hidden')
+  // })
   
   var click=true;
   function menu(){
