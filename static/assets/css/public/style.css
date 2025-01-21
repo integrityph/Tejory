@@ -894,8 +894,16 @@ video {
   height: 100vh;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
 .max-h-72 {
   max-height: 18rem;
+}
+
+.max-h-52 {
+  max-height: 13rem;
 }
 
 .min-h-\[64px\] {
@@ -966,6 +974,10 @@ video {
   width: 100%;
 }
 
+.w-screen {
+  width: 100vw;
+}
+
 .max-w-3xl {
   max-width: 48rem;
 }
@@ -984,6 +996,14 @@ video {
 
 .max-w-sm {
   max-width: 24rem;
+}
+
+.max-w-\[200px\] {
+  max-width: 200px;
+}
+
+.max-w-\[300px\] {
+  max-width: 300px;
 }
 
 .flex-1 {
@@ -1488,6 +1508,36 @@ video {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.px-\[200px\] {
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.px-\[1500px\] {
+  padding-left: 1500px;
+  padding-right: 1500px;
+}
+
+.px-\[150px\] {
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.px-\[120px\] {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.px-\[100px\] {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.px-\[10px\] {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .pb-3 {
@@ -2368,6 +2418,14 @@ html::-webkit-scrollbar-thumb {
     height: calc(100dvh - 140px);
   }
 
+  .md\:max-h-72 {
+    max-height: 18rem;
+  }
+
+  .md\:min-h-72 {
+    min-height: 18rem;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2378,6 +2436,10 @@ html::-webkit-scrollbar-thumb {
 
   .md\:w-2\/4 {
     width: 50%;
+  }
+
+  .md\:max-w-\[300px\] {
+    max-width: 300px;
   }
 
   .md\:flex-row {
@@ -2430,6 +2492,11 @@ html::-webkit-scrollbar-thumb {
   .md\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .md\:px-\[100px\] {
+    padding-left: 100px;
+    padding-right: 100px;
   }
 
   .md\:pt-20 {
