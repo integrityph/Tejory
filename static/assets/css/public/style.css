@@ -2262,6 +2262,10 @@ html::-webkit-scrollbar-thumb {
   background-color: rgb(5 7 8 / 0.3);
 }
 
+.dark\:hover\:bg-\[\#171717ad\]:hover:is(.dark *) {
+  background-color: #171717ad;
+}
+
 .dark\:hover\:bg-blue-700:hover:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
