@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @font-face {
   font-family: nexa;
   font-style: normal;
@@ -8,6 +9,7 @@
   src: local("Nexa"),
     url(https://fonts.cdnfonts.com/s/16221/NexaLight.woff) format("woff");
 }
+
 @font-face {
   font-family: nexa;
   font-style: normal;
@@ -15,6 +17,7 @@
   src: local("Nexa"),
     url(https://fonts.cdnfonts.com/s/16221/NexaBold.woff) format("woff");
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,6 +25,7 @@
   font-family: "Nexa 700", sans-serif !important;
   scroll-behavior: smooth !important;
 }
+
 .autoplay-progress {
   position: absolute;
   right: 16px;
@@ -51,6 +55,7 @@
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
 }
+
 #text-container::after {
   content: "|";
   color: red;
@@ -62,9 +67,11 @@
     opacity: 0;
   }
 }
+
 .swiper-pagination-bullet {
   background-color: red !important;
 }
+
 .swiper-pagination-bullet-active {
   background: red !important;
 }
@@ -156,7 +163,7 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
-/* From Uiverse.io by benjimich */ 
+/* From Uiverse.io by benjimich */
 .container {
   display: flex;
   position: relative;
@@ -186,19 +193,19 @@ html::-webkit-scrollbar-thumb {
   letter-spacing: 2px;
 }
 
-.button:hover ~.second {
+.button:hover~.second {
   opacity: .66;
   right: -20px;
   transition-delay: 50ms;
 }
 
-.button:hover ~.third {
+.button:hover~.third {
   opacity: .33;
   right: -40px;
   transition-delay: 100ms;
 }
 
-.second, 
+.second,
 .third {
   opacity: 0;
 }
