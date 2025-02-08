@@ -974,12 +974,12 @@ video {
   width: auto;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-dvw {
   width: 100dvw;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .max-w-3xl {

@@ -30,11 +30,11 @@ wrapper.addEventListener("mousemove", (event) => {
       e.classList.add('active')
       faqList.forEach(x => {
         if(x.classList.contains('active')){
-          x.classList.add('dark:bg-gray-800', 'bg-gray-200')
-          x.classList.remove('dark:bg-gray-700', 'bg-gray-50')
+          x.classList.add('dark:bg-[#171717]', 'bg-gray-200')
+          // x.classList.remove('dark:bg-[#171717]', 'bg-gray-50')
         } else {
-          x.classList.remove('dark:bg-gray-800', 'bg-gray-200')
-          x.classList.add('dark:bg-gray-700', 'bg-gray-50')
+          x.classList.remove('dark:bg-[#171717]', 'bg-gray-200')
+          // x.classList.add('dark:bg-[#171717]', 'bg-gray-50')
         }
       })
 
