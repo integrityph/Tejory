@@ -8,6 +8,7 @@
   <title>Features</title>
   <link rel="shortcut icon" href="static/assets/images/TEJORY_logo.png" type="image/x-icon">
   <link rel="stylesheet" href="static/assets/css/public/style.css">
+  <link rel="stylesheet" href="static/assets/css/public/style.css">
   <link href="https://fonts.cdnfonts.com/css/nexa-bold" rel="stylesheet">
   <link href="static/assets/css/aos/aos.css" rel="stylesheet">
 
@@ -19,7 +20,7 @@
     <img class="w-24 animate-spin" src="static/assets/images/TEJORY_logo.png" alt="" sizes="" srcset="">
     <p class="text-black dark:text-white font-bold animate-pulse text-xl">Loading</p>
 </div> -->
-  <main class="w-full bg-white h-auto lg:h-auto dark:bg-neutral-900 overflow-hidden">
+  <main class="w-full bg-white h-auto lg:h-auto dark:bg-neutral-900 overflow-hidden relative">
     <nav class="bg-white fixed w-full z-40 dark:bg-neutral-900 ">
       <div class="mx-auto px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
@@ -177,21 +178,25 @@
       class="text-2xl md:text-4xl pt-20 pb-5 text-center lg:px-[180px] dark:text-white font-bold flex items-center justify-center lg:justify-start gap-5  bg-neutral-100 dark:bg-neutral-800">
       Features</p>
     <section class="h-auto lg:h-auto flex flex-col justify-between relative w-full ">
-      <div class="w-full h-dvh dark:text-white flex flex-col md:flex-row">
-        <div class="w-full flex justify-center items-center px-10 relative" data-aos="fade-right">
+      <div class="bg1 absolute"></div>
+      <div class="w-full h-[80dvh] dark:text-white flex flex-col md:flex-row">
+        <div class="w-full flex justify-center items-center px-10 relative" data-aos="fade-right" data-aos-offset="700"
+          data-aos-easing="ease-in-out">
           <div class="relative mt-10 md:mt-0">
             <div
               class="absolute block h-[30px] w-[14px] -top-[7px] -ms-[7px] border-s border-t border-black dark:border-white animate-pulse">
             </div>
-            <img src="/static/assets/images/features/feature1.png" alt=""
-              class="border-2 border-black dark:border-white">
+            <div class="overflow-hidden border-2 border-black dark:border-white">
+              <img src="/static/assets/images/features/feature1.png" alt="" class="hover:scale-110 duration-500">
+            </div>
             <div
               class="relative block h-[30px] w-[14px] -top-[23px] float-end -me-[7px] border-b border-e border-black dark:border-white animate-pulse">
             </div>
           </div>
 
         </div>
-        <div class="w-full flex flex-col justify-center items-center" data-aos="fade-left">
+        <div class="w-full flex flex-col justify-center items-center" data-aos="fade-left" data-aos-offset="700"
+          data-aos-easing="ease-in-out">
           <div class="px-10">
             <h1 class="text-6xl">Open Source</h1>
             <p class="my-4 text-xl text-justify  dark:text-white/50 ">
@@ -207,8 +212,9 @@
       </div>
       <div class="w-full h-dvh dark:text-white flex flex-col md:flex-row">
 
-        <div class="w-full flex flex-col justify-center items-center" data-aos="fade-right">
-          <div class="px-10">
+        <div class="w-full flex flex-col justify-center items-center" data-aos="fade-right" data-aos-offset="700"
+          data-aos-easing="ease-in-out">
+          <div class="px-10 backdrop-blur-sm bg-[#00000000]">
             <h1 class="text-6xl">Intuitive Design</h1>
             <p class="my-4 text-xl text-justify  dark:text-white/50 ">
               Simplifies navigation and use, ensuring both new
@@ -221,8 +227,9 @@
             <div
               class="absolute block h-[30px] w-[14px] -top-[7px] -ms-[7px] border-s border-t border-black dark:border-white animate-pulse">
             </div>
-            <img src="/static/assets/images/features/feature1.png" alt=""
-              class="border-2 border-black dark:border-white">
+            <div class="overflow-hidden border-2 border-black dark:border-white">
+              <img src="/static/assets/images/features/feature2.png" alt="" class="hover:scale-110 duration-500">
+            </div>
             <div
               class="relative block h-[30px] w-[14px] -top-[23px] float-end -me-[7px] border-b border-e border-black dark:border-white animate-pulse">
             </div>
@@ -231,9 +238,23 @@
         </div>
       </div>
       <div class="w-full h-dvh dark:text-white flex flex-col md:flex-row">
-        <div class="w-full">1</div>
+        <div class="w-full flex justify-center items-center px-10 relative" data-aos="fade-right">
+          <div class="relative mt-10 md:mt-0">
+            <div
+              class="absolute block h-[30px] w-[14px] -top-[7px] -ms-[7px] border-s border-t border-black dark:border-white animate-pulse">
+            </div>
+            <div class="overflow-hidden border-2 border-black dark:border-white">
+              <img src="/static/assets/images/features/feature3.png" alt="" class="hover:scale-110 duration-500">
+            </div>
+            <div
+              class="relative block h-[30px] w-[14px] -top-[23px] float-end -me-[7px] border-b border-e border-black dark:border-white animate-pulse">
+            </div>
+          </div>
+
+        </div>
         <div class="w-full flex flex-col justify-center items-center">
-          <div class="px-10">
+          <div class="px-10 backdrop-blur-sm bg-[#00000000]" data-aos="fade-left" data-aos-offset="300"
+            data-aos-easing="ease-in-out">
             <h1 class="text-6xl">High Rated</h1>
             <p class="my-4 text-xl text-justify  dark:text-white/50 ">
               Well-regarded by users and experts alike for its
@@ -243,14 +264,28 @@
         </div>
       </div>
       <div class="w-full h-dvh dark:text-white flex flex-col md:flex-row">
-        <div class="w-full">1</div>
-        <div class="w-full flex flex-col justify-center ">
-          <div class="px-10">
+        <div class="w-full flex flex-col justify-center " data-aos="fade-right" data-aos-offset="300"
+          data-aos-easing="ease-in-out">
+          <div class="px-10 backdrop-blur-sm bg-[#00000000]">
             <h1 class="text-6xl">Communicate Directly</h1>
             <p class="my-4 text-xl text-justify  dark:text-white/50 ">
               Tejory works directly with crypto peer to peer.
             </p>
           </div>
+        </div>
+        <div class="w-full flex justify-center items-center px-10 relative" data-aos="fade-left">
+          <div class="relative mt-10 md:mt-0">
+            <div
+              class="absolute block h-[30px] w-[14px] -top-[7px] -ms-[7px] border-s border-t border-black dark:border-white animate-pulse">
+            </div>
+            <div class="overflow-hidden border-2 border-black dark:border-white">
+              <img src="/static/assets/images/features/feature4.png" alt="" class="hover:scale-110 duration-500">
+            </div>
+            <div
+              class="relative block h-[30px] w-[14px] -top-[23px] float-end -me-[7px] border-b border-e border-black dark:border-white animate-pulse">
+            </div>
+          </div>
+
         </div>
       </div>
 

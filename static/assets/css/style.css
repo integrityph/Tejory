@@ -26,6 +26,30 @@
   scroll-behavior: smooth !important;
 }
 
+.bg1 {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url(/static/assets/images/dots.svg);
+  background-size: 150px;
+  border-radius: 50% 50%;
+  animation: move 100s linear infinite;
+  transform: translateX(0%) translateY(78%);
+  filter: blur(0px);
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 10% -1000%;
+  }
+}
+
 .bg-divider-dark {
   background: linear-gradient(88deg, hsla(0, 0%, 9%, 0), #616161 25%, #616161 75%, hsla(0, 0%, 9%, 0));
   box-shadow: inset 0 -2px 1px 0 hsla(0, 0%, 100%, .1);
