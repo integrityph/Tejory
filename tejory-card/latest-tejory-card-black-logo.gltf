@@ -98,32 +98,38 @@
 		},
 		{
 			"doubleSided":true,
-			"extensions":{
-				"KHR_materials_specular":{
-					"specularFactor":0.4000000059604645
-				}
-			},
 			"name":"Back",
 			"pbrMetallicRoughness":{
-				"baseColorTexture":{
-					"index":0
-				},
+				"baseColorFactor":[
+					0.010960021056234837,
+					0.010960102081298828,
+					0.010960097424685955,
+					1
+				],
 				"metallicFactor":0,
 				"metallicRoughnessTexture":{
-					"index":1
+					"index":0
 				}
 			}
 		},
 		{
-			"alphaMode":"BLEND",
 			"doubleSided":true,
+			"extensions":{
+				"KHR_materials_specular":{
+					"specularColorFactor":[
+						2.0,
+						1.0913193225860596,
+						0.024607300758361816
+					]
+				}
+			},
 			"name":"Side",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":2
+					"index":1
 				},
 				"metallicRoughnessTexture":{
-					"index":3
+					"index":2
 				}
 			}
 		},
@@ -140,7 +146,7 @@
 			},
 			"name":"Tejory Text",
 			"normalTexture":{
-				"index":4
+				"index":3
 			},
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -150,7 +156,7 @@
 					1
 				],
 				"metallicRoughnessTexture":{
-					"index":5
+					"index":4
 				}
 			}
 		},
@@ -163,7 +169,7 @@
 			},
 			"name":"NFC Symbol",
 			"normalTexture":{
-				"index":6
+				"index":5
 			},
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -173,7 +179,7 @@
 					1
 				],
 				"metallicRoughnessTexture":{
-					"index":7
+					"index":6
 				}
 			}
 		},
@@ -197,7 +203,7 @@
 					1
 				],
 				"metallicFactor":0,
-				"roughnessFactor":0.5
+				"roughnessFactor":0
 			}
 		}
 	],
@@ -296,40 +302,31 @@
 			"source":0
 		},
 		{
-			"sampler":1,
+			"sampler":0,
 			"source":1
 		},
 		{
-			"sampler":1,
+			"sampler":0,
 			"source":2
 		},
 		{
-			"sampler":1,
+			"sampler":0,
 			"source":3
 		},
 		{
-			"sampler":1,
+			"sampler":0,
 			"source":4
 		},
 		{
-			"sampler":1,
+			"sampler":0,
 			"source":3
 		},
 		{
-			"sampler":1,
+			"sampler":0,
 			"source":4
-		},
-		{
-			"sampler":1,
-			"source":3
 		}
 	],
 	"images":[
-		{
-			"mimeType":"image/png",
-			"name":"tejory-nfc-back-no-bg-high-res",
-			"uri":"tejory-nfc-back-no-bg-high-res.png"
-		},
 		{
 			"mimeType":"image/png",
 			"name":"tejory-nfc-back-no-bg-high-res-3",
@@ -337,18 +334,23 @@
 		},
 		{
 			"mimeType":"image/png",
-			"name":"gold-scuffed_basecolor-boosted-gold-scuffed_roughness",
-			"uri":"gold-scuffed_basecolor-boosted-gold-scuffed_roughness.png"
+			"name":"gold-scuffed_basecolor-boosted",
+			"uri":"gold-scuffed_basecolor-boosted.png"
 		},
 		{
 			"mimeType":"image/png",
-			"name":"gold-scuffed_metallic-gold-scuffed_roughness",
-			"uri":"gold-scuffed_metallic-gold-scuffed_roughness.png"
+			"name":"gold-scuffed_roughness",
+			"uri":"gold-scuffed_roughness.png"
 		},
 		{
 			"mimeType":"image/png",
 			"name":"gold-scuffed_normal",
 			"uri":"gold-scuffed_normal.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"gold-scuffed_metallic-gold-scuffed_roughness",
+			"uri":"gold-scuffed_metallic-gold-scuffed_roughness.png"
 		}
 	],
 	"accessors":[
@@ -750,12 +752,6 @@
 		}
 	],
 	"samplers":[
-		{
-			"magFilter":9729,
-			"minFilter":9987,
-			"wrapS":33071,
-			"wrapT":33071
-		},
 		{
 			"magFilter":9729,
 			"minFilter":9987
