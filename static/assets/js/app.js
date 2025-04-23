@@ -217,44 +217,74 @@ function lightparticles(){
 
 
 
-
-fetch('https://api.coincap.io/v2/assets')
+try {
+  fetch('https://api.coinpaprika.com/v1/tickers')
   .then((response) => response.json())
   .then(response => {
-    // console.log(response.data)
-    var coins = response.data
+    console.log(response)
+    
+    var coins = response
     var coinbody = document.getElementById('coin-body')
     const template = document.getElementById("mytemp");
+
     var limit=5;
     var counter=0;
-    for (i in coins) {
-      if (coins[i].symbol == "USDT") {
-        continue;
-      }
-      if (coins[i].symbol == "USDC") {
-        continue;
-      }
-      // console.log(coins[i])
-      if(counter >= limit){
 
-      }
-      else{
+    for(i in coins) {
+      if (counter >= limit){
+        return
+      } else {
         let tdtemplate = template.cloneNode(true);
 
         tdtemplate.id = "coinid-" + coins[i].id;
         tdtemplate.classList.remove("hidden");
         tdtemplate.querySelector("[data-coin='rank']").innerText = coins[i].rank;
         tdtemplate.querySelector("[data-coin='name']").innerText = coins[i].symbol;  
-        var number=coins[i].priceUsd
-     
+        var number=coins[i].quotes.USD.price
         rounded = Math.round(number * 100) / 100
-        // console.log(rounded)
         tdtemplate.querySelector("[data-coin='price']").innerText = "$ "+rounded;
+
         coinbody.appendChild(tdtemplate)
-        counter++;
+        counter++
       }
-     
-  
     }
 
+    // var coins = response.data
+    // var limit=5;
+    // var counter=0;
+    // for (i in coins) {
+    //   if (coins[i].symbol == "USDT") {
+    //     continue;
+    //   }
+    //   if (coins[i].symbol == "USDC") {
+    //     continue;
+    //   }
+    //   // console.log(coins[i])
+    //   if(counter >= limit){
+
+    //   }
+    //   else{
+    //     let tdtemplate = template.cloneNode(true);
+
+    //     tdtemplate.id = "coinid-" + coins[i].id;
+    //     tdtemplate.classList.remove("hidden");
+    //     tdtemplate.querySelector("[data-coin='rank']").innerText = coins[i].rank;
+    //     tdtemplate.querySelector("[data-coin='name']").innerText = coins[i].symbol;  
+    //     var number=coins[i].priceUsd
+     
+    //     rounded = Math.round(number * 100) / 100
+    //     tdtemplate.querySelector("[data-coin='price']").innerText = "$ "+rounded;
+    //     coinbody.appendChild(tdtemplate)
+    //     counter++;
+    //   }
+     
+  
+    // }
+
+  }).catch(error =>{
+    console.log(error)
   })
+} catch (error) {
+  console.log(error)
+}
+
