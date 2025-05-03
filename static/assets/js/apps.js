@@ -26,17 +26,17 @@ var redirectLink = document.querySelector('#redirectLink')
 var counter = 5;
 
 if(getOS() == 'Mac OS'){
-  appLink.href = "https://play.google.com/store/apps/details?id=ph.integritynet.tejory"
+  appLink.href = "https://apps.apple.com/ph/app/tejory-wallet/id6744796394"
 } else if (getOS() == 'iOS') {
-  appLink.href = "https://play.google.com/store/apps/details?id=ph.integritynet.tejory"
+  appLink.href = "https://apps.apple.com/ph/app/tejory-wallet/id6744796394"
 } else if (getOS() == 'Android') {
   appLink.href = "https://play.google.com/store/apps/details?id=ph.integritynet.tejory"
 } else if (getOS() == 'Windows') {
-  appLink.href = "https://play.google.com/store/apps/details?id=ph.integritynet.tejory"
+  return
 } else if (getOS() == 'Linux'){
-  appLink.href = "https://play.google.com/store/apps/details?id=ph.integritynet.tejory"
+  return
 } else {
-  appLink.href = "https://play.google.com/store/apps/details?id=ph.integritynet.tejory"
+  return
 }
 
 setInterval(function() {
