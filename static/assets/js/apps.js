@@ -16,6 +16,7 @@ function getOS() {
     os = 'Android';
   } else if (/Linux/.test(platform)) {
     os = 'Linux';
+
   }
 
   return os;
@@ -32,11 +33,11 @@ if(getOS() == 'Mac OS'){
 } else if (getOS() == 'Android') {
   appLink.href = "https://play.google.com/store/apps/details?id=ph.integritynet.tejory"
 } else if (getOS() == 'Windows') {
-  return
+  appLink.href = "#"
 } else if (getOS() == 'Linux'){
-  return
+  appLink.href = "#"
 } else {
-  return
+  appLink.href = "#"
 }
 
 setInterval(function() {
